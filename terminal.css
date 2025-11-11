@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+   color: #111827;
+  font-family: "Averia Libre", system-ui;
+  font-weight: 300;
+  font-style: normal;
+  overflow: hidden;
+}
+
+.UI{
+  margin: auto;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  width: 95vw;
+  height: 92vh;
+  background-color: white;
+  overflow: hidden;
+}
+
+.contenedorEscena{
+  position: relative;
+  display: flex;
+  border: 3px;
+  border-style: solid;
+  border-color: red;
+  flex: 1;
+background-color: black;
+  background-image: radial-gradient(
+    rgba(1, 55, 1, 0.75), black 120%
+  );
+  height: 100vh;
+    color: rgb(13, 255, 0);
+  font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+  font-style: normal;
+    text-shadow: 0 0 5px #17ff7c;
+    overflow: hidden;
+}
+
+.contenedorEscena::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  
+}
+
+.contenedorEscena img {
+  position: absolute;
+  max-width: 40%; 
+  height: auto;
+}
+
+.contenedorDialogo{
+  
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 2%;
+flex: 0.5;
+  border: 2px dashed red;
+}
+
+#marcianoR{
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  max-width:30%; 
+
+}
+
+#marcianoV{
+  position: absolute;
+  top: 65%;
+  right: 25%;
+  max-width: 30%; 
+
+}
+
+#nave{
+  position: absolute;
+  top: 45%;
+  left: 35%;
+}
+
+#marcianoR, #marcianoV, #nave:hover{
+  cursor: pointer;
+}
+
+#observar{
+  color: red;
+}
+#linea1{
+  color: #313131
+  
+  
+/* visual terminal*/
+
+
+}
