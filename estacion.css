@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+   color: #111827;
+  font-family: "Averia Libre", system-ui;
+  font-weight: 300;
+  font-style: normal;
+  overflow: hidden;
+}
+
+.UI{
+  margin: auto;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  width: 95vw;
+  height: 92vh;
+  background-color: white;
+  overflow: hidden;
+}
+
+.contenedorEscena{
+  position: relative;
+  display: flex;
+  border-style: solid;
+  border-color: red;
+  flex: 1;
+  background-color: white;
+  background-image: url("https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/fondoEstacion1.png");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.contenedorEscena img {
+  position: absolute;
+  max-width: 40%; 
+  height: auto;
+}
+
+.contenedorDialogo{
+  
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 2%;
+flex: 0.5;
+  border: 2px dashed red;
+}
+
+#funcionarioTM{
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  max-width:30%; 
+
+}
+
+#letreroB{
+max-width: 8%;
+position: absolute;
+top: 25%;
+left: 50%;
+animation-name: interaccion;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+}
+#letreroD{
+max-width: 8%;
+position: absolute;
+top: 25%;
+left: 60%;
+animation-name: interaccion;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+}
+#letreroK{
+max-width: 8%;
+position: absolute;
+top: 25%;
+left: 80%;
+animation-name: interaccion;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+}
+#letreroG{
+max-width: 8%;
+position: absolute;
+top: 25%;
+left: 90%;
+animation-name: interaccion;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+}
+
+@keyframes interaccion {
+  0% {filter: brightness(100%)}
+  50% {filter: brightness(65%)}
+  100% {filter: brightness(100%)}
+
+}
+
+
+#letreroB:hover, #letreroD:hover, #letreroK:hover, #letreroG:hover{
+max-width: 9%;
+transform: rotate(-10deg);
+animation: none;
+}
+
+
+
+
+
+#marcianoV{
+  position: absolute;
+  top: 65%;
+  right: 25%;
+  max-width: 30%; 
+
+}
+
+#nave{
+  position: absolute;
+  top: 45%;
+  left: 35%;
+}
+
+#marcianoR, #marcianoV, #nave:hover{
+  cursor: pointer;
+}
+
+#observar{
+  color: red;
+}
+#linea1{
+  color: #313131
+}
