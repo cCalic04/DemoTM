@@ -50,6 +50,7 @@ background-color: black;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  pointer-events: none;
   background: repeating-linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.15),
@@ -57,7 +58,6 @@ background-color: black;
     transparent 2px,
     transparent 4px
   );
-  
 }
 
 .contenedorEscena img {
@@ -98,7 +98,16 @@ flex: 0.5;
   left: 35%;
 }
 
-#marcianoR, #marcianoV, #nave:hover{
+.terminalTitulos{
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+#selecBiblio{
+font-size: 0.8em;
+}
+
+#marcianoR, #marcianoV, #bitacora, #creditos, #desarrollador, #bibliografia, #nave:hover{
   cursor: pointer;
 }
 

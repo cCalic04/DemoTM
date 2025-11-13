@@ -4,7 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
   <title>TMPortal51-Usuarios</title>
   <link rel="icon" href="https://raw.githubusercontent.com/cCalic04/trabajo-final/refs/heads/main/Untitled-2.png">
-  <script src="script.js" defer></script>
+  <script src="usuarios.js" defer></script>
   <link rel="stylesheet" type="text/css" href="usuarios.css" />
 </head>
 
@@ -16,9 +16,41 @@
 
 
 <div class="interactuable"> <!-- Acá van los personajes. En el anchor va el link que se activa al interactuar, en el img va la imagen -->
-<a>
-<img/> 
+
+<a
+>
+<img
+id="parejaColada"
+src="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderR.png"
+onclick="entrevistas1()"
+/>  
 </a>
+<a>
+<img
+id="chicoColado"
+src="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png"
+onclick="entrevistas2()"
+
+/>
+</a>
+
+<a>
+<img
+id="chicaColada"
+src="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png"
+onclick="entrevistas3()"
+/>  
+</a>
+<a
+>
+<img
+id="estudiantesColados"
+src="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderT.png"
+onclick="entrevistas()"
+/> 
+</a>
+
+
 </div>
 
 </div>  
@@ -30,6 +62,14 @@
 <h4 id="observar">Mirar alrededor...</h4> <!-- Acá va la descripción de los elementos interactuables -->
 
 <h4 id="linea1">...</h4> <!-- Acá van los diálogos de cada elemento interactuable -->
+
+<div class="retratoOculto">
+<img
+id="retrato"
+src="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoDefault.png" 
+/> <!-- Acá van los retratos para dialogos -->
+<h4 id="linea1">...</h4> <!-- Acá van los diálogos de cada elemento interactuable -->
+</div>
 
 </div>
 

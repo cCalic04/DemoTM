@@ -1,11 +1,11 @@
 //estas constantes determinan las imágenes que se muestran en el avatar del dialogo
 
 const retratos = [
-  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoAmigos.png",
-  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoChico.png",
-  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoParejita.png",
-  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoVacio.png",
-  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoChica.png",
+  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retrato2.png",
+  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoVerde.png",
+  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoRojo.png",
+  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoDefault.png",
+  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoVerde.png",
 ];
 
 //estas constantes determinan los sonidos que se reproducen al hacer click al avatar
@@ -38,85 +38,85 @@ const Hablando3 = document.getElementById("chicaColada");
 function entrevistas() {
   if (audio1.paused){
     audio1.play();
-    Hablando.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/amigos.gif";
+    Hablando.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/Placeholderfram3T.gif";
   } else {
     audio1.pause();
-    Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/amigos.png";
+    Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderT.png";
   }
   if (!audio2.paused){
     audio2.pause()
-    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/parejita.png";
+    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderR.png";
   }
   if (!audio3.paused){
     audio3.pause()
-    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chico.png";
+    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png";
   }
   if (!audio4.paused){
     audio4.pause()
-    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chica.png";
+    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png";
   }
 }
 function entrevistas1() {
   if (audio2.paused){
     audio2.play();
-    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/parejita.gif";
+    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/RojoHabla.gif";
   } else {
     audio2.pause();
-    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/parejita.png";
+    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderR.png";
   }
   if (!audio1.paused){
     audio1.pause()
-    Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/amigos.png";
+    Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderT.png";
   }
   if (!audio3.paused){
     audio3.pause()
-    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chico.png";
+    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png";
   }
   if (!audio4.paused){
     audio4.pause()
-    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chica.png";
+    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png";
   }
 }
 function entrevistas2() {
   if (audio3.paused){
     audio3.play();
-    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chico.gif";
+    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/VerdeHabla.gif";
   } else {
     audio3.pause();
-    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chico.png";
+    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png";
   }
   if (!audio1.paused){
     audio1.pause()
-    Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/amigos.png";
+    Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderT.png";
   }
   if (!audio2.paused){
     audio2.pause()
-    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/parejita.png";
+    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderR.png";
   }
   if (!audio4.paused){
     audio4.pause()
-    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chica.png";
+    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png";
   }
 }
 function entrevistas3() {
   if (audio4.paused){
     audio4.play();
-    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chica.gif";
+    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/VerdeHabla.gif";
   }else {
     audio4.pause();
-    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chica.png";
+    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png";
   }
   if (!audio1.paused){
     audio1.pause()
-    Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/amigos.png";
+    Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderT.png";
   }
   if (!audio2.paused){
     audio2.pause()
-    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/parejita.png";
+    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderR.png";
   }
   if (!audio3.paused){
     audio3.pause()
-    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chico.png";
+    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png";
   }
 }
 

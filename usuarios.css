@@ -68,13 +68,52 @@ flex: 0.5;
 
 }
 
-#nave{
+#estudiantesColados{
   position: absolute;
-  top: 45%;
-  left: 35%;
+  top: 50%;
+  left: 50%;
+  max-width: 40%;
 }
 
-#marcianoR, #marcianoV, #nave:hover{
+#parejaColada{
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  max-width: 40%;
+}
+
+#chicoColado{
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  max-width: 20%;
+}
+
+#chicaColada{
+  position: absolute;
+  top: 40%;
+  left: 55%;
+  max-width: 25%;
+}
+
+.retratoOculto{
+  padding: 2%;
+  flex: 0.5;
+  border: 1px dashed red;
+  display: flex;
+}
+
+
+#retrato{
+max-width: 30%;
+border: 1px dashed red;
+}
+
+#retratoimg{
+
+}
+
+#marcianoR, #marcianoV, #estudiantesColados, #parejaColada, #chicoColado, #chicaColada, #nave:hover{
   cursor: pointer;
 }
 
@@ -82,5 +121,6 @@ flex: 0.5;
   color: red;
 }
 #linea1{
+  margin-left: 1%;
   color: #313131
 }
