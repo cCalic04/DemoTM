@@ -84,3 +84,10 @@ flex: 0.5;
 #linea1{
   color: #313131
 }
+
+#marcianoV{
+  position: absolute;
+  top: 55%;
+  right: 15%;
+  max-width: 30%; 
+}

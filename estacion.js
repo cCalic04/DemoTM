@@ -1,4 +1,59 @@
 
+var audio1 = new Audio(  "https://github.com/cCalic04/TMPortal51/raw/refs/heads/main/Destino-Portal-Norte.wav?raw=true");
+var audio2 = new Audio(  "https://github.com/cCalic04/TMPortal51/raw/refs/heads/main/Destino-Portal-El-Dorado-cc-nuestro.wav?raw=true");
+var audio3 = new Audio(  "https://github.com/cCalic04/TMPortal51/raw/refs/heads/main/Destino-San-Mateo.wav?raw=true");
+var audio4 = new Audio(  "https://github.com/cCalic04/TMPortal51/raw/refs/heads/main/alien1.mp3?raw=true");
+
+function letreros(){
+  if (audio1.paused){
+    audio1.play();
+  } else {
+    audio1.pause();
+  }
+  if (!audio2.paused){
+    audio2.pause()
+  }
+  if (!audio3.paused){
+    audio3.pause()
+  }
+}
+
+function letreros1(){
+  if (audio2.paused){
+    audio2.play();
+  } else {
+    audio2.pause();
+  }
+  if (!audio2.paused){
+    audio1.pause()
+  }
+  if (!audio3.paused){
+    audio3.pause()
+  }
+}
+
+function letreros2(){
+  if (audio3.paused){
+    audio3.play();
+  } else {
+    audio3.pause();
+  }
+  if (!audio2.paused){
+    audio1.pause()
+  }
+  if (!audio3.paused){
+    audio2.pause()
+  }
+}
+
+function MarcianoSonido(){
+  if (audio4.paused){
+    audio4.play();
+  } else {
+    audio4.pause();
+  }
+}
+
 //Estas constantes determinan dónde se muestra el dialogo
 
 const texto = document.getElementById("observar");
@@ -16,9 +71,9 @@ const textoRellenoFuncionarioTM = {
 const textoRellenoLetreroB = {
     letreroB: "Podría tomar este bus al norte..."
 }
-const textoRellenoLetreroD = {
+/*const textoRellenoLetreroD = {
     letreroD: "Podría tomar este bus a Engativá..."
-}
+}*/
 const textoRellenoLetreroK = {
     letreroK: "Podría tomar este bus a Fontibón..."
 }
@@ -30,7 +85,7 @@ const textoRellenoLetreroG = {
 //estos son los textos que salen en "..."
 
 const textoDialogoFuncionarioTM = {
-    funcionarioTM: "—¡Hola veci! Si quiere ir con los colados toca que agarre el B51. <br> Si quiere ir con otros funcionarios del sistema, toca que agarre el D51. <br> Si sumercé va para donde los ejecutivos del sistema, toca que agarre el K51. <br> Y si quiere ir con otros usuarios, toca que agarre el G51."
+    funcionarioTM: "—¡Hola veci!<br> Si quiere ir con los colados toca que agarre el B51. <br>Para donde las empleados del sistema, toca que agarre el K51. <br> Y si quiere ir con otros usuarios, toca que agarre el G51."
 }
 
 //estas funciones hacen que el dialogo actualice el html para mostrar el texto deseado
@@ -70,15 +125,20 @@ document.getElementById("funcionarioTM").addEventListener("mouseout", resetTexto
 document.getElementById("funcionarioTM").addEventListener("mouseover", actualizarTextoDialogoFuncionarioTM);
 document.getElementById("funcionarioTM").addEventListener("mouseout", resetTextoDialogo);
 
+
 document.getElementById("letreroB").addEventListener("mouseover", actualizarTextoLetreroB);
 document.getElementById("letreroB").addEventListener("mouseout", resetTexto);
+document.getElementById("letreroB").addEventListener("mouseover", letreros);
 
-document.getElementById("letreroD").addEventListener("mouseover", actualizarTextoLetreroD);
-document.getElementById("letreroD").addEventListener("mouseout", resetTexto);
+/*document.getElementById("letreroD").addEventListener("mouseover", actualizarTextoLetreroD);
+document.getElementById("letreroD").addEventListener("mouseout", resetTexto);*/
 
 document.getElementById("letreroK").addEventListener("mouseover", actualizarTextoLetreroK);
 document.getElementById("letreroK").addEventListener("mouseout", resetTexto);
+document.getElementById("letreroK").addEventListener("mouseover", letreros1);
 
 document.getElementById("letreroG").addEventListener("mouseover", actualizarTextoLetreroG);
 document.getElementById("letreroG").addEventListener("mouseout", resetTexto);
+document.getElementById("letreroG").addEventListener("mouseover", letreros2);
+
 

@@ -1,11 +1,17 @@
 //estas constantes determinan las imágenes que se muestran en el avatar del dialogo
 
+var audioFondo = document.getElementById('fondo');
+
+document.addEventListener("DOMContentLoaded", () => {
+    audioFondo.volume = 0.5;
+});
+
 const retratos = [
-  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retrato2.png",
-  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoVerde.png",
-  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoRojo.png",
-  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoDefault.png",
-  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoVerde.png",
+  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chicoRetratoNC.png",
+  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chicoRetrato1NC.png",
+  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chicaRetratoNC.png",
+  "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoVacio.png",
+  "http://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/extranjeraRetratoNC.png",
 ];
 
 //estas constantes determinan los sonidos que se reproducen al hacer click al avatar
@@ -20,17 +26,17 @@ const audios = [
 
 //estas variables determinan los sonidos que se pueden reproducir al clickear al personaje en la escena
 
-var audio1 = new Audio(  "https://github.com/cCalic04/TMPortal51/raw/refs/heads/main/EstudiantesColados.mp3?raw=true");
-var audio2 = new Audio(  "https://github.com/cCalic04/TMPortal51/raw/refs/heads/main/ParejaColada.mp3?raw=true");
-var audio3 = new Audio(  "https://github.com/cCalic04/TMPortal51/raw/refs/heads/main/ChicoColado.mp3?raw=true");
-var audio4 = new Audio(  "https://github.com/cCalic04/TMPortal51/raw/refs/heads/main/ChicaColada.mp3?raw=true");
+var audio1 = new Audio(  "https://github.com/cCalic04/TMPortal51/raw/refs/heads/main/chiconocolado.mp3?raw=true");
+var audio2 = new Audio(  "https://github.com/cCalic04/TMPortal51/raw/refs/heads/main/chicanocolada.mp3?raw=true");
+var audio3 = new Audio(  "https://github.com/cCalic04/TMPortal51/raw/refs/heads/main/chiconocolado2.mp3?raw=true");
+var audio4 = new Audio(  "https://github.com/cCalic04/TMPortal51/raw/refs/heads/main/Entrevista%20extranjera%20no%20colada.wav?raw=true");
 
 //estas constantes determinan si el muñeco en el mapa está Hablando
 
-const Hablando = document.getElementById("estudiantesColados");
-const Hablando1 = document.getElementById("parejaColada");
-const Hablando2 = document.getElementById("chicoColado");
-const Hablando3 = document.getElementById("chicaColada");
+const Hablando = document.getElementById("chicoBufanda");
+const Hablando1 = document.getElementById("chicaSantafe");
+const Hablando2 = document.getElementById("chico");
+const Hablando3 = document.getElementById("extranjera");
 
 
 //estas funciones reproducen los audios y pausan los demás
@@ -38,85 +44,85 @@ const Hablando3 = document.getElementById("chicaColada");
 function entrevistas() {
   if (audio1.paused){
     audio1.play();
-    Hablando.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/Placeholderfram3T.gif";
+    Hablando.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chico1NC.gif";
   } else {
     audio1.pause();
-    Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderT.png";
+    Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chiconocolado1NC.png";
   }
   if (!audio2.paused){
     audio2.pause()
-    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderR.png";
+    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chicanocoladaNC.png";
   }
   if (!audio3.paused){
     audio3.pause()
-    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png";
+    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chiconocoladoNC.png";
   }
   if (!audio4.paused){
     audio4.pause()
-    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png";
+    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/extranjeraNC.png";
   }
 }
 function entrevistas1() {
   if (audio2.paused){
     audio2.play();
-    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/RojoHabla.gif";
+    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chicaNC.gif";
   } else {
     audio2.pause();
-    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderR.png";
+    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chicanocoladaNC.png";
   }
   if (!audio1.paused){
     audio1.pause()
-    Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderT.png";
+    Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chiconocolado1NC.png";
   }
   if (!audio3.paused){
     audio3.pause()
-    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png";
+    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chiconocoladoNC.png";
   }
   if (!audio4.paused){
     audio4.pause()
-    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png";
+    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/extranjeraNC.png";
   }
 }
 function entrevistas2() {
   if (audio3.paused){
     audio3.play();
-    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/VerdeHabla.gif";
+    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chicoNC.gif";
   } else {
     audio3.pause();
-    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png";
+    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chiconocoladoNC.png";
   }
   if (!audio1.paused){
     audio1.pause()
-    Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderT.png";
+    Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chiconocolado1NC.png";
   }
   if (!audio2.paused){
     audio2.pause()
-    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderR.png";
+    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chicanocoladaNC.png";
   }
   if (!audio4.paused){
     audio4.pause()
-    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png";
+    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/extranjeraNC.png";
   }
 }
 function entrevistas3() {
   if (audio4.paused){
     audio4.play();
-    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/VerdeHabla.gif";
+    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/extranjeraNC.gif";
   }else {
     audio4.pause();
-    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png";
+    Hablando3.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/extranjeraNC.png";
   }
   if (!audio1.paused){
     audio1.pause()
-    Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderT.png";
+    Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chiconocolado1NC.png";
   }
   if (!audio2.paused){
     audio2.pause()
-    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderR.png";
+    Hablando1.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chicanocoladaNC.png";
   }
   if (!audio3.paused){
     audio3.pause()
-    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png";
+    Hablando2.src ="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chiconocoladoNC.png";
   }
 }
 
@@ -128,7 +134,7 @@ const retrato = document.getElementById("retrato");
 
 //Estas funciones actualizan el retrato que está apareciendo
 
-function retratoAzul(event) {
+function retratoBufanda(event) {
   retrato.src = retratos[0];
 }
 function retratoRojo(event) {
@@ -137,9 +143,11 @@ function retratoRojo(event) {
 function retratoVerde(event) {
   retrato.src = retratos[2];
 }
-function retratoChicaColada(event) {
+function retratoExtranjera(event) {
   retrato.src = retratos[4]
 }
+
+
 
 
 
@@ -153,62 +161,62 @@ const textoDialogo = document.getElementById("linea1");
 
 //estos son los textos que salen en "mirar alrededor"
 
-const textoRellenoestudiantesColados = {
-    estudiantesColados: "ESTUDIANTES SE COLAN PORQUE NO LES ALCANZA."
+const textoRellenochicoBufanda = {
+    chicoBufanda: "JOVEN NO SE COLA PORQUE YA TIENE UN SUBSIDIO."
 }
-const textoRellenoparejaColada = {
-    parejaColada: "JOVENES SE COLAN EN TM COMO PROTESTA POLÍTICA."
+const textoRellenochicaSantafe = {
+    chicaSantafe: "JOVEN SOLAMENTE SE COLA SI NO TIENE PARA EL PASAJE."
 }
-const textoRellenochicoColado = {
-    chicoColado: "JOVEN SE COLA PARA AHORRAR PLATA."
+const textoRellenochico = {
+    chico: "JOVEN NO ES CAPAZ DE COLARSE."
 }
-const textoRellenoChicaColada = {
-    chicaColada: "JOVEN SE COLA PORQUE EL SERVICIO ES PÉSIMO."
+const textoRellenoextranjera = {
+    extranjera: "EXTRANJERA QUIERE MÁS MEDIDAS ANTICOLADOS."
 }
 
 //estos son los textos que salen en "..."
 
-const textoDialogoestudiantesColados = {
-    estudiantesColados: "—A veces o es almorzar o pagar pasaje."
+const textoDialogochicoBufanda = {
+    chicoBufanda: "—Se colan solo porque les parece entretenido o porque se les hizo costumbre. No me parece."
 }
-const textoDialogoparejaColada = {
-    parejaColada: "—Yo nunca pago un pasaje, porque no sé qué hacen con mi dinero. Transmilenio debería funcionar bajo una institución pública."
+const textoDialogochicaSantafe = {
+    chicaSantafe: "—Ante la necesidad si lo justifico, pero no todas las veces."
 }
-const textoDialogochicoColado = {
-    chicoColado: "—Si voy con amigos si prefiero colarme. La plata que no gasto en pasajes la uso pa otras vainas."
+const textoDialogochico = {
+    chico: "—Ellos están exponiendo su vida, me parece que la integridad de su vida vale más que ir a colarse."
 }
-const textoDialogoChicaColada = {
-    chicaColada: "—El servicio es muy caro para lo que brinda."
+const textoDialogoextranjera = {
+    extranjera: "—Es un problema estructural (...). Deberían haber mecánismos para prevenirlo o castigarlo si no es por necesidad."
 }
 
 //estas funciones hacen que el dialogo actualice el html para mostrar el texto deseado
 
-function actualizarTextoestudiantesColados(event) {
-  texto.innerHTML = textoRellenoestudiantesColados[event.target.id] || "Mirar alrededor";
+function actualizarTextochicoBufanda(event) {
+  texto.innerHTML = textoRellenochicoBufanda[event.target.id] || "Mirar alrededor";
 }
-function actualizarTextoDialogoestudiantesColados(event) {
-  textoDialogo.innerHTML = textoDialogoestudiantesColados[event.target.id] || "...";
-}
-
-function actualizarTextoparejaColada(event) {
-  texto.innerHTML = textoRellenoparejaColada[event.target.id] || "Mirar alrededor";
-}
-function actualizarTextoDialogoparejaColada(event) {
-  textoDialogo.innerHTML = textoDialogoparejaColada[event.target.id] || "...";
+function actualizarTextoDialogochicoBufanda(event) {
+  textoDialogo.innerHTML = textoDialogochicoBufanda[event.target.id] || "...";
 }
 
-function actualizarTextochicoColado(event) {
-  texto.innerHTML = textoRellenochicoColado[event.target.id] || "Mirar alrededor";
+function actualizarTextochicaSantafe(event) {
+  texto.innerHTML = textoRellenochicaSantafe[event.target.id] || "Mirar alrededor";
 }
-function actualizarTextoDialogochicoColado(event) {
-  textoDialogo.innerHTML = textoDialogochicoColado[event.target.id] || "...";
+function actualizarTextoDialogochicaSantafe(event) {
+  textoDialogo.innerHTML = textoDialogochicaSantafe[event.target.id] || "...";
 }
 
-function actualizarTextoRellenoChicaColada(event) {
-  texto.innerHTML = textoRellenoChicaColada[event.target.id] || "Mirar alrededor";
+function actualizarTextochico(event) {
+  texto.innerHTML = textoRellenochico[event.target.id] || "Mirar alrededor";
 }
-function actualizarTextoDialogoChicaColada(event) {
-  textoDialogo.innerHTML = textoDialogoChicaColada[event.target.id] || "Mirar alrededor";
+function actualizarTextoDialogochico(event) {
+  textoDialogo.innerHTML = textoDialogochico[event.target.id] || "...";
+}
+
+function actualizarTextoRellenoextranjera(event) {
+  texto.innerHTML = textoRellenoextranjera[event.target.id] || "Mirar alrededor";
+}
+function actualizarTextoDialogoextranjera(event) {
+  textoDialogo.innerHTML = textoDialogoextranjera[event.target.id] || "Mirar alrededor";
 }
 
 //estas funciones hacen que el dialogo se reinicie después de quitar el mouse
@@ -225,31 +233,31 @@ function resetRetrato() {
 
 //estos querys hacen que todo lo anterior se active al pasar el cursor sobre los elementos
 
-document.getElementById("estudiantesColados").addEventListener("mouseover", actualizarTextoestudiantesColados);
-document.getElementById("estudiantesColados").addEventListener("mouseout", resetTexto);
-document.getElementById("estudiantesColados").addEventListener("mouseover", actualizarTextoDialogoestudiantesColados);
-document.getElementById("estudiantesColados").addEventListener("mouseout", resetTextoDialogo);
-document.getElementById("estudiantesColados").addEventListener("mouseover", retratoAzul);
-document.getElementById("estudiantesColados").addEventListener("mouseout", resetRetrato);
+document.getElementById("chicoBufanda").addEventListener("mouseover", actualizarTextochicoBufanda);
+document.getElementById("chicoBufanda").addEventListener("mouseout", resetTexto);
+document.getElementById("chicoBufanda").addEventListener("mouseover", actualizarTextoDialogochicoBufanda);
+document.getElementById("chicoBufanda").addEventListener("mouseout", resetTextoDialogo);
+document.getElementById("chicoBufanda").addEventListener("mouseover", retratoBufanda);
+document.getElementById("chicoBufanda").addEventListener("mouseout", resetRetrato);
 
-document.getElementById("parejaColada").addEventListener("mouseover", actualizarTextoparejaColada);
-document.getElementById("parejaColada").addEventListener("mouseout", resetTexto);
-document.getElementById("parejaColada").addEventListener("mouseover", actualizarTextoDialogoparejaColada);
-document.getElementById("parejaColada").addEventListener("mouseout", resetTextoDialogo);
-document.getElementById("parejaColada").addEventListener("mouseover", retratoVerde);
-document.getElementById("parejaColada").addEventListener("mouseout", resetRetrato);
+document.getElementById("chicaSantafe").addEventListener("mouseover", actualizarTextochicaSantafe);
+document.getElementById("chicaSantafe").addEventListener("mouseout", resetTexto);
+document.getElementById("chicaSantafe").addEventListener("mouseover", actualizarTextoDialogochicaSantafe);
+document.getElementById("chicaSantafe").addEventListener("mouseout", resetTextoDialogo);
+document.getElementById("chicaSantafe").addEventListener("mouseover", retratoVerde);
+document.getElementById("chicaSantafe").addEventListener("mouseout", resetRetrato);
 
-document.getElementById("chicoColado").addEventListener("mouseover", actualizarTextochicoColado);
-document.getElementById("chicoColado").addEventListener("mouseout", resetTexto);
-document.getElementById("chicoColado").addEventListener("mouseover", actualizarTextoDialogochicoColado);
-document.getElementById("chicoColado").addEventListener("mouseout", resetTextoDialogo);
-document.getElementById("chicoColado").addEventListener("mouseover", retratoRojo);
-document.getElementById("chicoColado").addEventListener("mouseout", resetRetrato);
+document.getElementById("chico").addEventListener("mouseover", actualizarTextochico);
+document.getElementById("chico").addEventListener("mouseout", resetTexto);
+document.getElementById("chico").addEventListener("mouseover", actualizarTextoDialogochico);
+document.getElementById("chico").addEventListener("mouseout", resetTextoDialogo);
+document.getElementById("chico").addEventListener("mouseover", retratoRojo);
+document.getElementById("chico").addEventListener("mouseout", resetRetrato);
 
-document.getElementById("chicaColada").addEventListener("mouseover", actualizarTextoRellenoChicaColada);
-document.getElementById("chicaColada").addEventListener("mouseout", resetTexto);
-document.getElementById("chicaColada").addEventListener("mouseover", actualizarTextoDialogoChicaColada);
-document.getElementById("chicaColada").addEventListener("mouseout", resetTextoDialogo);
-document.getElementById("chicaColada").addEventListener("mouseover", retratoChicaColada);
-document.getElementById("chicaColada").addEventListener("mouseout", resetRetrato)
+document.getElementById("extranjera").addEventListener("mouseover", actualizarTextoRellenoextranjera);
+document.getElementById("extranjera").addEventListener("mouseout", resetTexto);
+document.getElementById("extranjera").addEventListener("mouseover", actualizarTextoDialogoextranjera);
+document.getElementById("extranjera").addEventListener("mouseout", resetTextoDialogo);
+document.getElementById("extranjera").addEventListener("mouseover", retratoExtranjera);
+document.getElementById("extranjera").addEventListener("mouseout", resetRetrato)
 

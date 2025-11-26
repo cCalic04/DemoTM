@@ -1,4 +1,9 @@
 //estas constantes determinan las imágenes que se muestran en el avatar del dialogo
+var audioFondo = document.getElementById('fondo');
+
+document.addEventListener("DOMContentLoaded", () => {
+    audioFondo.volume = 0.2;
+});
 
 const retratos = [
   "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoAmigos.png",
@@ -25,6 +30,7 @@ var audio2 = new Audio(  "https://github.com/cCalic04/TMPortal51/raw/refs/heads/
 var audio3 = new Audio(  "https://github.com/cCalic04/TMPortal51/raw/refs/heads/main/ChicoColado.mp3?raw=true");
 var audio4 = new Audio(  "https://github.com/cCalic04/TMPortal51/raw/refs/heads/main/ChicaColada.mp3?raw=true");
 
+
 //estas constantes determinan si el muñeco en el mapa está Hablando
 
 const Hablando = document.getElementById("estudiantesColados");
@@ -42,6 +48,7 @@ function entrevistas() {
   } else {
     audio1.pause();
     Hablando.src = "https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/amigos.png";
+
   }
   if (!audio2.paused){
     audio2.pause()

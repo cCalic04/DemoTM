@@ -33,33 +33,34 @@ function MarcianoSonidont1(){
   }
 }
 
+
 //estos son los textos que salen en "mirar alrededor"
 const textoRellenoMarcianoR = {
-    marcianoR: "Parece un ser de otro mundo. Tiene forma de cebolla",
+    marcianoR: "Huele a marciano.",
 };
 
 const textoRellenoMarcianoV = {
-    marcianoV: "Parece un ser de otro mundo. El funcionamiento de sus gafas es un misterio",
+    marcianoV: "Huele a marciano.",
 };
-const textoRellenoNave = {
-    nave: "Es una nave espacial averiada, parece que lleva acá mucho tiempo. <br> La puerta está abierta, podrías entrar."
+
+const textoRellenoTerminal = {
+    terminal: "Aparentemente es un computador bastante antiguo."
 }
 
-const textoRellenoFuncionarioTM = {
-    funcionarioTM: "Un funcionario de Transmilenio. Le voy a preguntar qué rutas hay..."
+const textoRellenoTransmi = {
+    transmi: "Detrás de esta puerta se oye el ajetreo de la ciudad."
 }
+
 //estos son los textos que salen en "..."
 
 const textoDialogoMarcianoR = {
-    marcianoR: "—¡Bienvenido, terrícola!<br> Somos Allium y Allobec.<br> Venimos desde otra galaxia.<br> Por favor, terrícola, ¡haznos el honor de entrar a nuestra nave y visitar nuestra replica virtual de un Transmilenio!"
-}
-const textoDialogoMarcianoV = {
-    marcianoV: "—Llevamos algunos meses varados aquí.<br> Como nuestra nave ya no prende nos toca ir en Transmilenio a todos lados.<br> Tenemos mucha curiosidad por el tema de los colados...<br> Por favor, terrícola, ¡haznos el honor de entrar a nuestra nave y visitar nuestra replica virtual de un Transmilenio!"
+    marcianoR: "—¡Esta es nuestra nave! <br> Tenemos un compu donde llevamos registros de nuestra investigación sobre los colados."
 }
 
-const textoDialogoFuncionarioTM = {
-    funcionarioTM: "—¡Hola veci! Si quiere ir con los colados toca que agarre el B51. <br> Si quiere ir con otros funcionarios del sistema, toca que agarre el D51. <br> Si sumercé va para donde los ejecutivos del sistema, toca que agarre el J51. <br> Y si quiere ir con otros usuarios, toca que agarre el K51."
+const textoDialogoMarcianoV = {
+    marcianoV: "—Al fondo de la nave está la puerta al simulador de Transmilenio."
 }
+
 
 //estas funciones hacen que el dialogo actualice el html para mostrar el texto deseado
 
@@ -69,11 +70,11 @@ function actualizarTextoMarcianoR(event) {
 function actualizarTextoMarcianoV(event) {
   texto.innerHTML = textoRellenoMarcianoV[event.target.id] || "Mirar alrededor";
 }
-function actualizarTextoNave(event) {
-  texto.innerHTML = textoRellenoNave[event.target.id] || "Mirar alrededor";
+function actualizarTextoTerminal(event) {
+  texto.innerHTML = textoRellenoTerminal[event.target.id] || "Mirar alrededor";
 }
-function actualizarTextoFuncionarioTM(event) {
-  texto.innerHTML = textoRellenoFuncionarioTM[event.target.id] || "Mirar alrededor";
+function actualizarTextoTransmi(event) {
+  texto.innerHTML = textoRellenoTransmi[event.target.id] || "Mirar alrededor";
 }
 
 
@@ -82,9 +83,6 @@ function actualizarTextoDialogoMarcianoR(event) {
 }
 function actualizarTextoDialogoMarcianoV(event) {
   textoDialogo.innerHTML = textoDialogoMarcianoV[event.target.id] || "...";
-}
-function actualizarTextoDialogoFuncionarioTM(event) {
-  textoDialogo.innerHTML = textoDialogoFuncionarioTM[event.target.id] || "...";
 }
 
 //estas funciones hacen que el dialogo se reinicie después de quitar el mouse
@@ -98,8 +96,11 @@ function resetTexto() {
 
 //estos querys hacen que todo lo anterior se active al pasar el cursor sobre los elementos
 
-document.getElementById("nave").addEventListener("mouseover", actualizarTextoNave);
-document.getElementById("nave").addEventListener("mouseout", resetTexto)
+document.getElementById("terminal").addEventListener("mouseover", actualizarTextoTerminal);
+document.getElementById("terminal").addEventListener("mouseout", resetTexto)
+
+document.getElementById("transmi").addEventListener("mouseover", actualizarTextoTransmi);
+document.getElementById("transmi").addEventListener("mouseout", resetTexto);
 
 document.getElementById("marcianoR").addEventListener("mouseover", actualizarTextoMarcianoR);
 document.getElementById("marcianoR").addEventListener("mouseout", resetTexto);
@@ -115,8 +116,6 @@ document.getElementById("marcianoV").addEventListener("mouseout", resetTextoDial
 document.getElementById("marcianoV").addEventListener("mouseover", MarcianoSonido);
 document.getElementById("marcianoV").addEventListener("mouseout", MarcianoSonidont);
 
-document.getElementById("funcionarioTM").addEventListener("mouseover", actualizarTextoFuncionarioTM);
-document.getElementById("funcionarioTM").addEventListener("mouseout", resetTexto);
-document.getElementById("funcionarioTM").addEventListener("mouseover", actualizarTextoDialogoFuncionarioTM);
-document.getElementById("funcionarioTM").addEventListener("mouseout", resetTextoDialogo);
+
+
 

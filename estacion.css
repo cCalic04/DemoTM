@@ -59,6 +59,10 @@ flex: 0.5;
 
 }
 
+#funcionarioTM:hover{
+  cursor: pointer;
+}
+
 #letreroB{
 max-width: 8%;
 position: absolute;

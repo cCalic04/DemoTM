@@ -9,49 +9,48 @@
 </head>
 
 <body>
+  <audio id="fondo"  src="https://github.com/cCalic04/TMPortal51/raw/refs/heads/main/3.-Bus.mp3" autoplay="" loop=""></audio>
+
   
 <div class="UI"> <!-- Contiene todo lo que se muestra en la página -->
   
 <div class="contenedorEscena"> <!-- Contiene la escena. Osea, las imágenes interactuables< -->
 
-
-<div class="interactuable"> <!-- Acá van los personajes. En el anchor va el link que se activa al interactuar, en el img va la imagen -->
-
 <a
 >
 <img
-id="parejaColada"
-src="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderR.png"
+id="chicaSantafe"
+src="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chicanocoladaNC.png"
 onclick="entrevistas1()"
 />  
 </a>
-<a>
-<img
-id="chicoColado"
-src="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png"
-onclick="entrevistas2()"
-
-/>
-</a>
 
 <a>
 <img
-id="chicaColada"
-src="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderV.png"
+id="extranjera"
+src="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/extranjeraNC.png"
 onclick="entrevistas3()"
 />  
 </a>
 <a
 >
 <img
-id="estudiantesColados"
-src="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/frame1PlaceholderT.png"
+id="chicoBufanda"
+src="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chiconocolado1NC.png"
 onclick="entrevistas()"
 /> 
 </a>
 
+<a>
+<img
+id="chico"
+src="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/chiconocoladoNC.png"
+onclick="entrevistas2()"
 
-</div>
+/>
+</a>
+
+
 
 </div>  
 
@@ -59,14 +58,15 @@ onclick="entrevistas()"
   
 <h3>Navega por el sitio web utilizando tu mouse. Pasa el cursor sobre los personajes o sobre el escenario para interactuar</h3>
 
+<h4 id="regresar"><a href="estacion.html">Regresar a la página anterior</a></h4>
+
 <h4 id="observar">Mirar alrededor...</h4> <!-- Acá va la descripción de los elementos interactuables -->
 
-<h4 id="linea1">...</h4> <!-- Acá van los diálogos de cada elemento interactuable -->
 
 <div class="retratoOculto">
 <img
 id="retrato"
-src="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoDefault.png" 
+src="https://raw.githubusercontent.com/cCalic04/TMPortal51/refs/heads/main/retratoVacio.png" 
 /> <!-- Acá van los retratos para dialogos -->
 <h4 id="linea1">...</h4> <!-- Acá van los diálogos de cada elemento interactuable -->
 </div>
